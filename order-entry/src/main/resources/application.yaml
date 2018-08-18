@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:petstore
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  cache:
+    cache-names: inventory
+    caffeine:
+      spec: maximumSize=10,expireAfterAccess=3600s
+petstore:
+  products:
+    url: http://petstoreapp.azurewebsites.net/api/products/
+
