@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "d0c1de9c-6683-4bb9-8e9c-6da0283f3164",
+		"name": "single-stone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"_postman_id": "827de94b-2c3c-40b0-a70d-c55c9e8cd9ef",
+			"name": "petstore",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://petstoreapp.azurewebsites.net/api/products",
+					"protocol": "https",
+					"host": [
+						"petstoreapp",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "c4f1d3d2-eafc-4c2d-8144-8cc0ffc40b6a",
+			"name": "receive",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"customerId\": \"12347\",\r\n  \"items\": [\r\n    {\r\n      \"productId\": \"8ed0e6f7\",\r\n      \"quantity\": 1\r\n    },\r\n    {\r\n      \"productId\": \"c0258525\",\r\n      \"quantity\": 3\r\n    },\r\n    {\r\n      \"productId\": \"0a207870\",\r\n      \"quantity\": 2\r\n    }\r\n  ]\r\n}\r\n"
+				},
+				"url": {
+					"raw": "localhost:8080/order/entry",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order",
+						"entry"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "6418bed5-bb05-416a-a53c-978da7caae82",
+			"name": "get detail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"customerId\": \"12345\",\r\n  \"items\": [\r\n    {\r\n      \"productId\": \"8ed0e6f7\",\r\n      \"quantity\": 1\r\n    },\r\n    {\r\n      \"productId\": \"c0258525\",\r\n      \"quantity\": 3\r\n    },\r\n    {\r\n      \"productId\": \"0a207870\",\r\n      \"quantity\": 2\r\n    }\r\n  ]\r\n}\r\n"
+				},
+				"url": {
+					"raw": "localhost:8080/order/entry/detail/12347",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order",
+						"entry",
+						"detail",
+						"12347"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "483e4be2-5d1b-4c08-a8f3-b02d20d4ee66",
+			"name": "get summary",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"customerId\": \"12345\",\r\n  \"items\": [\r\n    {\r\n      \"productId\": \"8ed0e6f7\",\r\n      \"quantity\": 1\r\n    },\r\n    {\r\n      \"productId\": \"c0258525\",\r\n      \"quantity\": 3\r\n    },\r\n    {\r\n      \"productId\": \"0a207870\",\r\n      \"quantity\": 2\r\n    }\r\n  ]\r\n}\r\n"
+				},
+				"url": {
+					"raw": "localhost:8080/order/entry/summary/12347",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order",
+						"entry",
+						"summary",
+						"12347"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "33be88fe-a9da-492e-9f6f-11c486bc36a5",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "f1ceb7f9-393c-468a-be55-013e64800a5a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
