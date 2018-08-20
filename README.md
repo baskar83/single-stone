@@ -7,4 +7,4 @@ Steps to execute:
 3. do mvn clean
 4. do mvn install - this command itself will start spring boot and executes test against the endpoints
 5. Use the command to execute jar: java -jar ./target/order-entry-0.0.1-SNAPSHOT.jar 
-6. Use the posman collectin to test the service
+6. Use the posman collectin from this repo to test the service
